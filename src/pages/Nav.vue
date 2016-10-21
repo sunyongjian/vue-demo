@@ -1,8 +1,8 @@
 <template lang="jade">
   div.nav
-    a.link(v-link="{path:'/index'}") home
-    a.link(v-link="{path:'/shop'}") home
-    a.link(v-link="{path:'/cart'}") home
+    a.link(v-link="{path:'/index'}") 主页
+    a.link(v-link="{path:'/shop'}") 商品
+    a.link(v-link="{path:'/cart'}") 购物车
 </template>
 
 <script>

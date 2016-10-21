@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import {changeColor, changeMemory, addItem, changeType} from '../../vuex/actions'
+import {changeColor, changeMemory, addItem} from '../../vuex/actions'
 export default {
   data () {
     return {
@@ -70,7 +70,6 @@ export default {
     actions: {
       changeColor,
       changeMemory,
-      changeType,
       addItemx (item) {
         var self = this
         self.block = true
