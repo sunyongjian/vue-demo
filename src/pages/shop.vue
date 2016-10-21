@@ -1,11 +1,11 @@
-<template>
-    <shop></shop>
+<template lang="jade">
+    shop
 </template>
 
 <script>
 import shop from '../components/shop'
 export default {
-    components: {shop}
+  components: {shop}
 }
 </script>
 

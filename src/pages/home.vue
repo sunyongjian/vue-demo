@@ -1,5 +1,5 @@
-<template>
-    <Hello></Hello>
+<template lang="jade">
+    Hello
 </template>
 
 
@@ -7,20 +7,20 @@
 import Hello from '../components/Hello'
 
 export default {
-    components: {Hello},
-    data () {
-        return {
-            msg: 'HOME'
-        }
-    },
-    methods: {
-        getData: function () {
-            this.$http.get('/get').then(
-                res =>
-                    console.log(res)
-            )
-        }
+  components: {Hello},
+  data () {
+    return {
+      msg: 'HOME'
     }
+  },
+  methods: {
+    getData: function () {
+      this.$http.get('/get').then(
+          res =>
+            console.log(res)
+      )
+    }
+  }
 }
 </script>
 

@@ -9,6 +9,6 @@ Vue.use(vueResource)
 const router = new Router()
 routerMap(router)
 router.redirect({
-    '*': '/'
+  '*': '/'
 })
 router.start(App, '#root')

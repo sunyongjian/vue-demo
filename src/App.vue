@@ -9,8 +9,8 @@
 import Nav1 from './pages/Nav'
 import store from './vuex/store'
 export default {
-    store,
-    components: { Nav1 }
+  store,
+  components: { Nav1 }
 }
 </script>
 

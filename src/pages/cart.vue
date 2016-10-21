@@ -1,6 +1,6 @@
 <template lang="jade">
     p(v-if="!getCart.length") 购物车空空如也
-
+    p.total 总计：{{totalPrice}}元
     table(v-if="getCart.length")
       thead
         tr
@@ -9,7 +9,6 @@
           th 价格
           th 操作
       tbody
-        tr 总计： {{totalPrice}}  元
         tr(v-for="item in getCart")
           td {{item.color}}
           td {{item.memory}}
@@ -20,28 +19,30 @@
 <script>
 import {removeItem} from '../vuex/actions'
 export default {
-    computed: {
-        'totalPrice': function () {
-            let totalPrice = 0
-            for (let i in this.getCart) {
-                totalPrice += Number(this.getCart[i].price)
-            }
-            return totalPrice
-        }
-    },
-    vuex: {
-        getters: {
-            getCart: (state) =>
-                state.index.cart
-        },
-        actions: {
-            removeItem
-        }
+  computed: {
+    'totalPrice': function () {
+      let totalPrice = 0
+      for (let i in this.getCart) {
+        totalPrice += Number(this.getCart[i].price)
+      }
+      return totalPrice
     }
+  },
+  vuex: {
+    getters: {
+      getCart: (state) =>
+        state.index.cart
+    },
+    actions: {
+      removeItem
+    }
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
+.total
+  color: #42b983
 table
   widht: 600px
   margin-left: 100px
@@ -53,8 +54,10 @@ table
     line-height: 30px
     &.remove
       color: red
+      cursor: pointer
   tbody
     tr
       background: #eee
+
 
 </style>

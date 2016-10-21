@@ -1,9 +1,8 @@
-<template lang="html">
-  <div class="nav">
-    <a class="link" v-link="{path:'/index'}">home</a>
-    <a class="link" v-link="{path:'/shop'}">shop</a>
-    <a class="link" v-link="{path:'/cart'}" >card</a>
-  </div>
+<template lang="jade">
+  div.nav
+    a.link(v-link="{path:'/index'}") home
+    a.link(v-link="{path:'/shop'}") home
+    a.link(v-link="{path:'/cart'}") home
 </template>
 
 <script>
