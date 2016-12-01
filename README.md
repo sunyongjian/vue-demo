@@ -1,7 +1,12 @@
 # demo
 
-> A Vue.js project
-
+> 利用官方 vue-cli 搭建，自己学习vue时写的小demo
+- 附vue-vuex-webpack搭建流程
+```
+npm install -g vue-cli    //官方搭建工具
+vue init webpack youProjectName && cd youProjectName //初始化项目 
+npm install // 安装依赖
+```
 ## Build Setup
 
 ``` bash
